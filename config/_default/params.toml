@@ -1,0 +1,44 @@
+[home]
+    sections = ["tech", "finance"]
+    fullCover = false
+    centerHeadline = false
+    style = ""
+    [home.feature]
+        orientation = "horizontal"
+        color = "primary"
+        width = 4
+        align = "start"
+
+[sections]
+    [sections.tech]
+        title = "Blog"
+        type = "tabs"
+        sort = "date"
+        reverse = true
+        color = "body-tertiary"
+        cols = 3
+        padding = "1"
+        header = "full"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0 card-zoom card-body-margin"
+        homepage = 3
+        separator = true
+    [sections.finance]
+        title = "Finance"
+        type = "tabs"
+        sort = "date"
+        reverse = true
+        color = "body-tertiary"
+        cols = 3
+        padding = "1"
+        header = "full"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0 card-zoom card-body-margin"
+        homepage = 3
+        separator = true
+
+[links]
+    ewallet="https://www.touchngo.com.my"
+    aliexpress="https://aliexpress.ru"
