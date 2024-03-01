@@ -6495,20 +6495,29 @@ function initIndex() {
         href: "/about/",
         title: "About",
         description: "我的说明书",
-        content: " 个人经历 \u0026nbsp; 3年的马来西亚电子钱包APP支付测试经验 👉 Touch\u0026rsquo;n Go Digital\u0026nbsp; 2+年跨境电商平台速卖通的物流和结算测试经验 👉 Aliexpress\u0026nbsp; 4+年接口自动化测试经验 3+年测试效能建设，测试工具开发，测试平台搭建，持续测试 3+年测试专项经验，测试环境建设，巡检，资损防控建设，监控\n我可以提供 \u0026nbsp; 完善的质量保障流程 自动化和资损防控建设 测试环境的搭建，优化，巡检，监控 测试效能建设，流程优化，提效工具建设，持续测试平台，性能测试工具\n"
+        content: " 个人经历 \u0026nbsp; 3年的马来西亚电子钱包APP支付测试经验 👉 Touch\u0026rsquo;n Go Digital\u0026nbsp; 2+年跨境电商平台速卖通的物流和结算测试经验 👉 Aliexpress\u0026nbsp; 4+年接口自动化测试经验 3+年测试效能建设，测试工具开发，测试平台搭建，持续测试 3+年测试专项经验，测试环境建设，巡检，资损防控建设，监控\n我可以提供 \u0026nbsp; 完善的质量保障流程 自动化和资损防控建设 测试环境的搭建，优化，巡检，监控 测试效能建设，流程优化，提效工具建设，持续测试平台，性能测试工具\n我的邮箱：xhddxiin@gmail.com\n"
       })
       .add(
       {
         id: 1,
         tag: "en",
-        href: "/tech/testmeasure/",
+        href: "/tech/quicktest/",
+        title: "Guideline to build a simple CT",
+        description: "this is a simple demo",
+        content: " Basic usage \u0026nbsp; what is continuous testing?\nContinuous testing aims to provide rapid and frequent feedback on the quality and reliability of the software being developed. It involves automatically executing a comprehensive set of tests, as part of the development and deployment pipeline.\nPrerequisites \u0026nbsp; here is the preparation that need to know and will use in the follow steps\\\ndocker github jenkins newman node allure Installation and config \u0026nbsp; install jenkins and create a volume docker pull jenkins/jenkins docker volume create jenkins-data run jenkins in daemon state docker run \\ -u root \\ --rm \\ -d \\ -p 8080:8080 \\ -p 50000:50000 \\ -v jenkins-data:/var/jenkins_home \\ -v /var/run/docker.sock:/var/run/docker.sock \\ jenkins/jenkins install jenkins plugins\nNodeJS Allure config the plugin\u0026rsquo;s locations go to jenkins dashboard \u0026ndash;\u0026gt; manage jenkins \u0026ndash;\u0026gt; tools 5.create an item and config \u0026nbsp; in the jenkins dashboard, click to create a new item \u0026ndash;\u0026gt;freestyle project \u0026ndash;\u0026gt;config\nSource Code Management choose git and paste you git url \u0026ldquo;Branches to build\u0026rdquo;, if have no customize requirement, leave it */main or */master(depends on gitlab or github) select \u0026ldquo;Provide Node \u0026amp; npm bin/ folder to PATH\u0026rdquo; build step the json file can be exported from postman and uplaod to git node --version npm -v npm install -g newman newman --version newman run demo.postman_collection.json -g demo.postman_environment.json -r allure post build actions choose Allure report Build Triggers can choose Build periodically,so your project can be build and running at a specific time Run you project \u0026nbsp; click build now to run your project and get the report slide 1 slide 2 Previous Next More About \u0026nbsp; jenkins provides various plugins and support to different stack, it also support java and golang project continues build. it is very useful\nin a big company, there always a platform to control this flow and make it view more acceptable to technical and non-technicals\n"
+      })
+      .add(
+      {
+        id: 2,
+        tag: "en",
+        href: "/tech/loadtest/",
         title: "Jmeter实现分布式压测",
         description: "  ",
         content: " 1、为什么需要分布式测试？ \u0026nbsp; 在Jmeter中使用一个线程来模拟真实环境的一个用户，如对一个HTTP接口模拟100并发，那么在Jmeter中就需要创建100个线程来向该接口发送请求。 因为Jmeter是用Java语言开发，每创建一个线程JDK5之后的版本，JVM默认会为每个线程分配1M的堆栈内存空间（JDK5之前是256KB），可通过 -XssJVM参数调整。如果单机要模拟较大并发量的情况下，很难满足测试需求。比如对某一个服务集群模拟10万的并发，那么就需要10万个线程， 就需要98GB（100000*1/1024）左右的物理内存，很少情况会有一台超100GB内存的机器用来做测试，加上测试的需求不一。这种测试需求下， 可以将一般配置（4核8G/16G\u0026hellip;）的多台机器组织成一个集群，在每台机器上安装并启动一个Jmeter服务，以少聚多的方式来应对大并发测试 的场景。\n2、分布式测试原理 \u0026nbsp; Jmeter分布式测试环境中有两个角色：Controller（1）和Agent（N） Controller节点：向参与的Agent节点发送测试脚本，并聚合Agent节点的执行结果 Agent节点：接收并执行Controller节点发送过来的测试脚本，并将执行结果返回给Controller\n3、安装部署 \u0026nbsp; 所有节点IP都必须安装Jmeter，且版本一致 wget http://mirror.bit.edu.cn/apache//jmeter/binaries/apache-jmeter-5.0.tgz //下载jmeter tar -jxvf apache-jmeter-[version].tgz //解压 4、设置SSL证书 \u0026nbsp; cd $JMETER_HOME/bin ./create-rmi-keystore.sh 您的名字与姓氏是什么？rmi；rmi是默认配置名称，如果不是这个名称，需要修改$JMETER_HOME/bin/jmeter.properties文件：server.rmi.ssl.keystore.alias 的值 最后一步密钥库口令：不要输入密码，直接回车 拷贝rmi_keystore.jks文件到所有节点（Controller和Agents）的bin目录下 5、Controller配置 \u0026nbsp; vim $JMETER_HOME/bin/jmeter.properties 把所有加入测试的Agent节点IP添加到remote_hosts配置中，多个IP之间用逗号分隔，Jmeter server 默认端口号为：1099，IP后面没有加端口则使用默认端口。 remote_hosts=127.0.0.1 remote_host=192.168.0.1,192.168.0.2 6、测试 \u0026nbsp; controller机器上启动jmeter $JMETER_HOME/jmeter.sh 编写好压测脚本 添加线程组 jmeter -n -t ~/Desktop/dcpp-data-collect.jmx -R 192.168.0.1:1099,192.168.0.2:1099 -l ~/Desktop/dcpp.log -e -o ~/Desktop/dcpp 命令行指定远程机器运行，GUI-\u0026gt;运行-\u0026gt;远程运行。 不填IP则为指定所有远程机器运行 7、注意事项 \u0026nbsp; 检查防火墙是否过滤了rmi端口，默认1099.或者关闭防火墙 确保所有节点处理同一子网中\n"
       })
       .add(
       {
-        id: 2,
+        id: 3,
         tag: "en",
         href: "/tech/testanalysis/",
         title: "如何做测试分析？",
@@ -6517,7 +6526,7 @@ function initIndex() {
       })
       .add(
       {
-        id: 3,
+        id: 4,
         tag: "en",
         href: "/tech/testenvir/",
         title: "如何治理测试环境？",
@@ -6526,7 +6535,7 @@ function initIndex() {
       })
       .add(
       {
-        id: 4,
+        id: 5,
         tag: "en",
         href: "/tech/sdet/",
         title: "测开就是做工具？",
