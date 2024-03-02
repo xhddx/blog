@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tech/quicktest/</loc>
+    <loc>https://example.org/tech/quicktest/</loc>
     <lastmod>2024-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/</loc>
+    <loc>https://example.org/tech/</loc>
     <lastmod>2024-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
     <lastmod>2024-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://example.org/about/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/testanalysis/</loc>
+    <loc>https://example.org/tech/testanalysis/</loc>
     <lastmod>2023-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/testenvir/</loc>
+    <loc>https://example.org/tech/testenvir/</loc>
     <lastmod>2023-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/finance/</loc>
+    <loc>https://example.org/finance/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/sdet/</loc>
+    <loc>https://example.org/tech/sdet/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/loadtest/</loc>
+    <loc>https://example.org/tech/loadtest/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>

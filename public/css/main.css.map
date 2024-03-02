@@ -3,7 +3,7 @@
 	"file": "main.css",
 	"sourceRoot": "/Users/carlhu/xhddx",
 	"sources": [
-		"/scss/bundle-1709301136276535000.scss",
+		"/scss/bundle-1709301815914128000.scss",
 		"hugo:vars",
 		"../Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod/github.com/gethinode/hinode@v0.22.5/assets/scss/common/_variables.scss",
 		"../Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod/github.com/gethinode/hinode@v0.22.5/assets/scss/theme/_variables.scss",
